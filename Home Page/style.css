@@ -1,0 +1,458 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Merriweather:ital@1&family=Space+Mono&family=Work+Sans&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Spartan", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Global Styles */
+
+h1 {
+  font-size: 50px;
+  line-height: 64px;
+  color: #222;
+}
+
+h2 {
+  font-size: 46px;
+  line-height: 54px;
+  color: #222;
+}
+
+h4 {
+  font-size: 20px;
+  color: #222;
+}
+
+h6 {
+  font-weight: 700;
+  font-size: 12px;
+}
+
+p {
+  font-size: 16px;
+  color: #465b52;
+  margin: 15px 0 20px 0;
+}
+
+.section-p1 {
+  padding: 40px 80px;
+}
+
+.section-m1 {
+  margin: 40px 0;
+}
+
+.section-m2 {
+    margin: 20px 0;
+}
+  
+body {
+  width: 100%;
+}
+
+.logo {
+    width: 150px;
+    cursor: pointer;
+    margin-top: 10px ;
+    margin-left: 0px;
+}
+
+#header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 80px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0);
+    height: 70px;
+    z-index: 999;
+    position: sticky;
+    top: 0;
+    left: 0;
+    background-color: white;
+}
+
+#navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#navbar li {
+    list-style: none;
+    padding: 20px;
+    color: black;
+    position: relative;
+}
+
+#navbar li a {
+    color: black;
+    text-decoration: none;
+    font-size:  16px;
+    font-weight: 500;
+    transition: 0.3s ease;
+}
+
+#navbar li a:hover, 
+#navbar li a.active {
+    color: darkgray;
+
+}
+
+#navbar li a.active::after,
+#navbar li a:hover::after {
+    content: "";
+    width: 30%;
+    height: 2px;
+    background: beige;
+    position: absolute;
+    bottom: 10px;
+    left: 30px;
+
+}
+
+/* home page */
+#banner {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    background-image:url("img/bannerconvert.png") ;
+    height: 90vh;
+    width: 100%;
+    background-size:cover;
+    padding: 0 80px;
+    background-position:  top 25% right 0;
+    
+}
+
+#description {
+    text-align: center;
+    justify-content: center;
+}
+
+
+#description h1 {
+    font-weight: bold;
+    padding-bottom: 15px;
+}
+
+button {
+    width: 120px;
+    border: 0;
+    padding: 12px 10px;
+    outline: none;
+    background-color:black;
+    color: white;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+#btndesc:hover{
+    transition: 0.3s;
+    background-color: darkgray;
+
+}
+
+#product-home {
+    position: relative;
+    overflow: hidden;
+    padding: 20px;
+    min-height: 60vh;
+    max-width: 1200px;
+    
+    margin: 0 auto;
+}
+
+
+
+.product-container {
+    padding: 0 20px;
+    display: flex;
+    scroll-behavior: smooth;
+    justify-items: center;
+    overflow-x: auto;
+}
+
+.product-container::-webkit-scrollbar {
+display: none;
+}
+
+
+.slipper-wrapper {
+    margin-left: 18px; 
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.slipper-wrapper img {
+    width: 300px;
+    object-fit: cover;
+}
+
+#product-home h2 {
+    height: 60px;
+    width: 100%;
+}
+
+#product-home .product-container i {
+    height: 45px;
+    width: 45px;
+    font-size: 1.2rem;
+    text-align: center;
+    line-height: 45px;
+    background: lightgray;
+    border-radius: 50%;
+    position: absolute;
+    cursor: pointer;
+}
+
+.product-container i:first-child {
+    left: 20px;
+    top: 100px;
+
+}
+
+.slipper-wrapper:hover .slippername{
+    color: black;
+    text-decoration: underline;
+}
+
+.product-container i:last-child {
+    right: 20px;
+    top: 100px;
+}
+
+
+.slippers img:first-child {
+    margin-left: 0px;
+}
+
+
+#left, #right {
+    opacity: 0.2;
+}
+
+
+#left:hover, #right:hover {
+    opacity: 1;
+}
+
+
+@media screen and (max-width: 900px) {
+    .slippers img{
+        width: calc(100%/2);
+    }
+
+ 
+}
+
+@media screen and (max-width: 550px) {
+    .slippers img{
+        width: 100%;
+    }
+}
+
+#callactionbanner {
+    width: 100%;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-image: url(img/actionbanner.jpg);
+    background-size: contain;
+    background-position: center;
+}
+
+#callactionbanner h4{
+    color: black;
+    font-size: 16px;
+}
+
+#callactionbanner h2{
+    color: black;
+    font-size: 30px;
+    padding: 10px 0;
+}
+
+#callactionbanner h2 span{
+    color: brown;
+}
+
+.btn {
+    font-size: 14px;
+    font-weight: bold;
+    padding: 15px 30px;
+    cursor: pointer;
+    outline: none;
+    color: white;
+    background-color: black;
+    transition: 0.3s;
+}
+
+
+.btn:hover {
+    color: black;
+    background-color: grey;
+}
+
+#newsletter {
+    margin-left: 55px; 
+    width: 500px;
+
+}
+input {
+    font-size: 12px;
+    width: 300px;
+    display: inline-block;
+    border: 1px thin lightgray;
+    
+    padding: 0 1.25em;
+}
+
+input::placeholder {
+    font-size: 12px;
+}
+
+input:hover {
+    border : 2px thick darkgray;
+}
+
+
+ button.innerbutton{
+    width: 50px;
+    background: none;
+    color: grey;
+    cursor: pointer;
+    border-radius: 50%;
+    font-size: 15px;
+    top: 0;
+    right: 0;
+    padding: 0;
+} 
+
+#newsletter .text h4 {
+    font-weight: 50;
+    color: #5C4033;
+}
+
+
+.social-links img {
+    height: 20px;
+    cursor: pointer;
+    margin: 20px;
+}
+
+footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.footer-column {
+    margin-bottom: 20px;
+    display: inline-block;
+    justify-content: center;
+    justify-items: center;
+    
+}
+
+footer h4 {
+    font-size: 14px;
+    padding-bottom: 20px;
+}
+
+footer a {
+    font-size: 13px;
+    text-decoration: none;
+    color: black;
+    justify-content: center;
+}
+
+footer ul li{
+    list-style: none;
+    color:black;
+}
+
+footer ul a:hover {
+    color: gray;
+}
+
+footer .copyright{
+    width: 100%;
+    text-align: center;
+   
+}
+
+footer .copyright p {
+    font-size: 10px;
+}
+
+@media screen and (max-width: 799px) {
+    #banner {
+        height: 70vh;
+        padding: 0 80px;
+
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    #banner {
+        background-position: 50%;
+
+    }
+}
+
+@media screen and (max-width: 755px) {
+    #header {
+        width: 82vh;
+    }
+
+    #banner 
+    {
+        background-position: 50%;
+    }
+    #navbar li {
+        
+        padding: 10px;
+    }
+    #description,#product-home, #callactionbanner,
+    #newsletter, footer{
+        width: 90%;
+        margin-left: 30px;    }
+}
+
+@media screen and (max-width:  475px) {
+    #header {
+        width: 140vh;
+    }
+    #banner {
+        width: 140vh;
+    }
+    #description,#product-home, #callactionbanner,
+    #newsletter, footer{
+        width: 155%;
+        margin-left: 30px;    }
+}
+
+
+@media screen and (max-width:  400px) {
+    #header {
+        width: 160vh;
+    }
+    #banner {
+        width: 160vh;
+    }
+    #description,#product-home, #callactionbanner,
+    #newsletter, footer {
+       width: 200%;
+       margin-left: 35px;
+    }
+}
